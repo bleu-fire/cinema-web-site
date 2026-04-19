@@ -1,12 +1,14 @@
 :root {
-  --primary-color: #ea4b4b;
-  --secondary-color: #551919;
+  --primary-color: #D25353;
+  --secondary-color:#9E3B3B ;
+  --shadow-color:#EA7B7B;
+  --button-color:#FFEAD3;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Source Sans 3', monospace;
 }
 
 .bg {
@@ -37,8 +39,8 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: white;
-  background-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--button-color);
   padding: 10px 20px;
   border-radius: 10px;
   transition: 0.3s;
@@ -46,14 +48,15 @@ body {
 
 .navbar a:hover {
   transform: scale(0.1);
-  background-color: rgb(177, 16, 16);
-  box-shadow: 0px 0px 40px rgb(236, 177, 177);
+  background-color:var(--shadow-color);
+  box-shadow: 0px 0px 40px var(--secondary-color);
   
 }
 
 .navbar img {
-  height: 60px;
-  width: 60px;
+
+  height: 100px;
+  width: 100px;  
 }
 
 .movie-list {
@@ -75,7 +78,7 @@ body {
   margin: 5px 0;
   font-size: 16px;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: var(--secondary-color);
   border-radius: 10px;
 }
 .movie-list h6 {
@@ -83,7 +86,7 @@ body {
   margin: 0;
   font-size: 13px;
   text-align: center;
-  background-color: aliceblue;
+  background-color: var(--button-color);
   border-radius: 20px;
 }
 
@@ -92,9 +95,13 @@ body {
   max-width: 700px;
   margin: 100px auto;
   border-radius: 20px;
-  color: white;
+  color:var(--button-color);
   padding: 20px;
   text-align: center;
+  transition: 0.9s;
+}
+.about:hover{
+box-shadow: 0px 0px 100px;
 }
 
 .about span {
@@ -109,11 +116,11 @@ body {
 
 .about h2 {
   margin-top: 30px;
-  color: rgb(198, 154, 19);
+  color: rgb(209, 193, 144);
 }
 
 .footer-banner {
-  background-color: #b18784;
+  background-color:var(--secondary-color);
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -125,8 +132,8 @@ body {
   text-decoration: none;
   background-color: var(--primary-color);
   color: white;
-  padding: 15px;
-  border-radius: 50%;
+  padding: 3% 3%;
+  border-radius: 100%;
   transition: 0.3s;
 }
 

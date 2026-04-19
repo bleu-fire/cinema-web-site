@@ -1,4 +1,4 @@
-let movie_one = document.getElementById('labobo')as HTMLElement;
+const movie_one = document.getElementById('movie')as HTMLElement;
 
  //type for get  movie name and  all info 
  type Movie = {
@@ -16,24 +16,23 @@ async function Show_Movie () {
     if(response.ok){
    
       let data:Movie[]  = await response.json();
-      for(let watch of  data){
+      
+      for(let watch of  data.slice(0,20)){
         // for list movie 
         let html:string = `
           <img src="${watch.image.medium}" alt="image">
           <h4>${watch.name}</h4>
           <h6>${watch.summary}</h6>
         `
+        ;
         movie_one.innerHTML += html;
       }
 
+    }
 
-    }
-    if(!response.ok){
-      console.error(`not respone ${response.status}`)
-      return []
-    }
+
+
 
 }
-
 Show_Movie()
-  
+
